@@ -51,3 +51,33 @@ def parse_json(data):
 ######################################################################
 # INSERT CODE HERE
 ######################################################################
+
+def db_get_count():
+    #Add DB stuff
+    return 1
+
+@app.route("/health" , methods=["GET"])
+def get_health():
+    return {"status":"OK"}
+
+@app.route("/count" , methods=["GET"])
+def get_count():
+    count = db_get_count()
+    return {"count": count}
+
+
+@app.route("/song" , methods="POST")
+def create_song():
+    pass
+
+@app.route("/song/{id}" , methods=["GET"])
+def get_song(id):
+    pass
+
+@app.route("/song/{id}" , methods["PUT"])
+def update_song(id):
+    pass
+
+@app.route("/song/{id}" , methods["DELETE"])
+def delete_song():
+    pass
